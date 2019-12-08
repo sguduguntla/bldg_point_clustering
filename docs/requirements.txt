@@ -1,6 +1,0 @@
-numpy
-pandas
-python-Levenshtein
-sklearn
-matplotlib
-sphinxbootstrap4theme
