@@ -33,25 +33,25 @@ Use the plot3D function in the Plotter to create a
 
 Featurizer
 ==========
-.. autoclass:: bldg_point_clustering.featurizer.featurizer.Featurizer
+.. autoclass:: featurizer.featurizer.Featurizer
    :members:
    :undoc-members:
 
 Cluster
 =======
-.. autoclass:: bldg_point_clustering.cluster.cluster.Cluster
+.. autoclass:: cluster.cluster.Cluster
    :members:
    :undoc-members:
 
 Plotter
 =======
-.. automodule:: bldg_point_clustering.plotter.plotter
+.. automodule:: plotter.plotter
    :members:
    :undoc-members:
 
 Metrics
 =======
-.. automodule:: bldg_point_clustering.metrics.metrics
+.. automodule:: metrics.metrics
    :members:
    :undoc-members:
 
