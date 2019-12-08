@@ -1,7 +1,0 @@
-numpy
-pandas
-python-Levenshtein
-sklearn
-matplotlib
-plotly
-sphinxbootstrap4theme
