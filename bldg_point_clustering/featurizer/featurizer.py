@@ -14,7 +14,7 @@ class Featurizer:
 
     """
 
-    __heuristics = read_file("heuristics.yaml", file_type="yaml")
+    __heuristics = read_file("heuristics.yml", file_type="yaml")
 
     def __init__(self, filename, corpus):
         
