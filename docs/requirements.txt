@@ -4,5 +4,5 @@ python-Levenshtein
 sklearn
 matplotlib
 plotly
-sphinx=2.2.2
+sphinx==2.2.2
 sphinxbootstrap4theme
