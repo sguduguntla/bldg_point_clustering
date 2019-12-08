@@ -3,5 +3,6 @@ pandas
 python-Levenshtein
 sklearn
 matplotlib
+pyyaml
 plotly
 sphinxbootstrap4theme

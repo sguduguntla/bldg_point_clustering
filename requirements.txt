@@ -4,4 +4,5 @@ python-Levenshtein
 sklearn
 matplotlib
 plotly
+pyyaml
 sphinxbootstrap4theme
