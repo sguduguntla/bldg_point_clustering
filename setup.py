@@ -23,7 +23,6 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    data_files=[('.', ['bldg_point_clustering/helper/heuristics.yml'])],
     install_requires = reqs,
     python_requires='>=3.5',
 )

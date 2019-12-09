@@ -38,7 +38,10 @@ def read_file(filename, file_type="text"):
     :return: String if file_type = "text", dictionary if file_type = "json" or "yaml"
     """
 
-    with open(os.path.join(sys.prefix, filename), "r") as f:
+    my_path = os.path.abspath(os.path.dirname(__file__))
+    path = os.path.join(my_path, "../" + filename)
+
+    with open(path, "r") as f:
         if file_type == "json":
             return json.load(f)
         elif file_type == "yaml":
@@ -53,8 +56,10 @@ def write_file(filename, data, file_type="text"):
     :param data: The data to be written into the file (String if file_type="text" or JSON if file_type="json" or "yaml")
     :param file_type: The type of the file being read (text, json, yaml)
     """
+    my_path = os.path.abspath(os.path.dirname(__file__))
+    path = os.path.join(my_path, "../" + filename)
 
-    with open(os.path.join(sys.prefix, filename), "w") as f:
+    with open(os.path.join(path), "w") as f:
         if file_type == "json":
             json.dump(data, f)
         elif file_type == "yaml":
