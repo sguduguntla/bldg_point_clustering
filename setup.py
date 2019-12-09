@@ -10,7 +10,7 @@ with open(path.join(this_directory, 'README.md')) as f:
 
 setup(
     name="bldg_point_clustering",
-    version="0.0.2",
+    version="0.0.3",
     author="Sriharsha Guduguntla",
     author_email="sguduguntla@berkeley.edu",
     description="A Python 3.5+ wrapper for clustering building point labels using KMeans, DBScan, and Agglomerative clustering",
@@ -23,6 +23,7 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
+    include_package_data = True,
     install_requires = reqs,
     python_requires='>=3.5',
 )

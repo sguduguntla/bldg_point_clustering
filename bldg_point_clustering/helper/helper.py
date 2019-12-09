@@ -39,9 +39,9 @@ def read_file(filename, file_type="text"):
     """
 
     my_path = os.path.abspath(os.path.dirname(__file__))
-    path = os.path.join(my_path, "../" + filename)
+    path = os.path.join(my_path, "..", filename)
 
-    with open(path, "r") as f:
+    with open(os.path.abspath(path), "r") as f:
         if file_type == "json":
             return json.load(f)
         elif file_type == "yaml":
@@ -57,9 +57,9 @@ def write_file(filename, data, file_type="text"):
     :param file_type: The type of the file being read (text, json, yaml)
     """
     my_path = os.path.abspath(os.path.dirname(__file__))
-    path = os.path.join(my_path, "../" + filename)
+    path = os.path.join(my_path, "..", filename)
 
-    with open(os.path.join(path), "w") as f:
+    with open(os.path.abspath(path), "w") as f:
         if file_type == "json":
             json.dump(data, f)
         elif file_type == "yaml":

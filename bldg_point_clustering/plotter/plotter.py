@@ -10,9 +10,9 @@ from sklearn.metrics import silhouette_samples
 import plotly.express as px
 
 def plot_3D(df, x, y, z):
-    """ Runs one iteration of the agglomerative/hierarchical clustering algorithm 
+    """ Plots metrics data on a 3D plot with given axes x, y, and z.
 
-    :param df: A dataframe of columns of numerical data
+    :param df: A Pandas DataDrame of columns of numerical data (i.e. Metrics DataFrame)
     :param x: The column of the dataframe to go on the x-axis (Column Name -> String)
     :param y: The column of the dataframe to go on the y-axis (Column Name -> String)
     :param z: The column of the dataframe to go on the z-axis (Column Name -> String)
@@ -55,18 +55,18 @@ def plot_silhouettes(X, labels):
     
     plt.show()
 
-def plot_inertia(X, n_clusters=2):
-    """ Finds and plots silhouette samples for each label
+def plot_kmeans_inertia(X, max_clusters=10):
+    """ Finds and plots inertia/sum of squared errors of running kmeans on number of clusters from 1 to max_clusters inclusive.
 
     :param X: A dataframe of the featurized data
-    :param n_clusters: The number of clusters to plot the inertia (sum of squared error) for.
+    :param n_clusters: The maximum number of clusters to plot the inertia (sum of squared error) for.
 
     """
     sse = []
-    list_k = list(range(1, n_clusters))
+    list_k = list(range(1, max_clusters + 1))
 
     for k in list_k:
-        km = KMeans(n_clusters=n_clusters)
+        km = KMeans(n_clusters=k)
         km.fit(X)
         sse.append(km.inertia_)
 
